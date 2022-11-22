@@ -1,0 +1,90 @@
+#include <stdio.h>
+int main () {
+int marka;
+float tutar1,tutar2,tutar3,tutar4;
+float h,m,r,n;
+int a=0,b=0,c=0,d=0;
+
+while (marka!=111) {
+printf("marka kodunu girin:");
+scanf("%d",&marka);
+ switch (marka) {
+
+case 1:
+    printf("tutari giriniz:"); 
+    scanf("%f",&tutar1);   
+    printf("%f\n",tutar1);
+    h+=tutar1;   
+    a++;
+break;
+
+
+case 2:
+    printf("tutari giriniz:"); 
+    scanf("%f",&tutar2);
+    printf("%f\n",tutar2);
+    m+=tutar2;
+    b++;
+break;
+
+
+case 3:
+    printf("tutari giriniz:"); 
+    scanf("%f",&tutar3);   
+    printf("%f\n",tutar3);
+    r+=tutar3;
+    c++;
+break;
+
+
+case 4:
+    printf("tutari giriniz:"); 
+    scanf("%f",&tutar4);
+    printf("%f\n",tutar4);
+    n+=tutar4;
+    d++;
+break;
+
+ }
+
+}
+printf("gecis bitti\n");
+printf("ozet:\n");
+
+printf("%.2f\n",h);
+printf("%.2f\n",m);
+printf("%.2f\n",r);
+printf("%.2f\n",n);
+
+
+if(h>m && h>r && h>n) 
+printf("en çok tutar h\n");
+
+if(m>h && m>r && m>n)
+printf("en çok tutar m\n");
+
+if(r>h && r>m && r>n)
+printf("en çok tutar r\n");
+
+if(n>h && n>m && n>r)
+printf("en çok tutar n\n");
+
+
+
+if(a==b && b==c && c==d) 
+printf("geçişler esit %d kez",a);
+
+if(a>b && a>c && a>d) 
+printf("en çok tekrar eden a, %d kez ",a);
+
+if(b>a && b>c && b>d)
+printf("en çok tekrar eden b, %d kez ",b);
+
+if(c>a && c>b && c>d)
+printf("en çok tekrar eden c, %d kez ",c);
+
+if(d>a && d>b && d>c)
+printf("en çok tekrar eden d, %d kez ",d);
+
+    return 0;
+}
